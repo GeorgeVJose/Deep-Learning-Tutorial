@@ -1,2 +1,2 @@
 # Deep-Learning-Tutorial
-Deep Learning Tutorial Techkshetra
+Deep Learning Tutorial @RSET
