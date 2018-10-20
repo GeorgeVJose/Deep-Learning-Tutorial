@@ -1,0 +1,48 @@
+Greetings from Techkshetra 2018, RSET
+
+
+Thank you for registering for workshop *Introduction to Deep Learning with Tensorflow*. The
+following are the details of the same.
+
+
+*Date : 9th Febuary 2018*
+
+*Venue : S6 CSE BETA, First Floor, Main Building, RSET*
+
+*Reporting Time : 9:00 AM*
+
+*Time : 9:30 AM to 1:30 AM*
+
+*Requirements:
+	The students are required to have a prior knowledge in Python programming. 
+Only a basic knowledge of pregramming is required.
+You are required to bring a *fully charged laptop* for the workshop as
+there will be a hands on session. You will also need to bring a *valid
+college ID card* for registration. Before attending the workshop, there are
+some pre-requisites that need to be completed for the smooth conducting of
+the workshop.
+
+*Since we are limited on time, it is necessary that you complete the
+following steps before attending the workshop*
+
+*Installations* :
+       --> Linux Systems (Preffered):
+		1. Open terminal and execute command
+			sudo pip3 install tensorflow keras gym
+	
+       --> Windows Systems:
+		1. Install python in your system
+			https://www.python.org/downloads/windows/
+		2. Install pip
+			https://pip.pypa.io/en/stable/installing/
+		3. Open command prompt and execute
+			pip3 install tensorflow keras gym[atari]
+		   (Try to refer different sources if installation fails.)
+
+In case of any queries please contact :
+George V Jose : 9747846097
+John Polachan : 9544795689
+Jewel Jo Prince : 9495656567
+
+Regards,
+Coordinator.

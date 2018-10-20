@@ -48,7 +48,7 @@ fully_connected = tf.nn.dropout(fully_connected, 0.8)
 logits = tf.matmul(fully_connected, W_out) + b_out
 
 cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits = logits, labels = y))
-tf.summary.scalar("Cost", cost)
+#tf.summary.scalar("Cost", cost)
 optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
 
 correct = tf.equal(tf.argmax(logits, 1), tf.argmax(y, 1))
@@ -68,11 +68,11 @@ with tf.Session() as sess:
         for j in range(100):
             epoch_x, epoch_y = mnist.train.next_batch(batch_size)
             _,c = sess.run([optimizer, cost], feed_dict={x:epoch_x, y:epoch_y})
-            if j % 10 == 0:
-                summary ,_ ,c = sess.run([merged, optimizer, cost], feed_dict = {x : epoch_x, y : epoch_y})
-                summary_writer.add_summary(summary, (epoch*100)+j)
-            else:
-                _, c = sess.run([optimizer, cost], feed_dict = {x : epoch_x, y : epoch_y})
+            # if j % 10 == 0:
+            #     summary ,_ ,c = sess.run([merged, optimizer, cost], feed_dict = {x : epoch_x, y : epoch_y})
+            #     summary_writer.add_summary(summary, (epoch*100)+j)
+            # else:
+            #     _, c = sess.run([optimizer, cost], feed_dict = {x : epoch_x, y : epoch_y})
             epoch_loss += c
         print("Epoch: ",epoch,", Loss: ",epoch_loss)
     acc = accuracy.eval(feed_dict={x:mnist.test.images, y:mnist.test.labels})

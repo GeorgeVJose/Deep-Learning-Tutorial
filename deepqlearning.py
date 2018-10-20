@@ -68,9 +68,8 @@ if __name__ == "__main__":
     # agent.load("./save/cartpole-dqn.h5")
     done = False
     batch_size = 32
-    previous_reward = 0.0
 
-    for e in range(EPISODES):
+    for e in range(500):
         state = env.reset()
         state = np.reshape(state, [1, state_size])
         for time in range(500):
@@ -83,8 +82,10 @@ if __name__ == "__main__":
             agent.remember(state, action, reward, next_state, done)
             state = next_state
             if done:
-                print("episode: {}/{}, score: {}, e: {:.2}"
-                      .format(e, EPISODES, time, agent.epsilon))
+                print("episode: {}/500, score: {}, e: {:.2}"
+                      .format(e, time, agent.epsilon))
                 break
+        # if e==400:
+        #     agent.save('model_400.h5')
         if len(agent.memory) > batch_size:
             agent.replay(batch_size)
